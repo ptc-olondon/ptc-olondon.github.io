@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+<script>
+
+const mytempxml = 'SampleDoc.tempxml';
+        function tempxmlDoc(callback){
+            let tempxmlhttp = new tempxmlHttpRequest();
+            tempxmlhttp.onreadystatechange = () => {
+                if (tempxmlhttp.readyState === 4 && tempxmlhttp.status === 200) {
+                    console.log(tempxmlhttp.responsetempxml);
+                    callback(tempxmlhttp.responsetempxml);
+                }
+            };
+            tempxmlhttp.open('GET', mytempxml, true);
+            tempxmlhttp.send();
+        }
+        tempxmlDoc((e) => {
+            let jsonText = tempxmlToJson(e);
+            //output of json
+            console.log(jsonText);
+        });
+
+
+
+function tempxmlToJson(tempxml) {
+	
+	var obj = {};
+
+	if (tempxml.nodeType == 1) { // element
+		// do attributes
+		if (tempxml.attributes.length > 0) {
+		obj["@attributes"] = {};
+			for (var j = 0; j < tempxml.attributes.length; j++) {
+				var attribute = tempxml.attributes.item(j);
+				obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+			}
+		}
+	} else if (tempxml.nodeType == 3) { // text
+		obj = tempxml.nodeValue;
+	}
+
+	// do children
+	if (tempxml.hasChildNodes()) {
+		for(var i = 0; i < tempxml.childNodes.length; i++) {
+			var item = tempxml.childNodes.item(i);
+			var nodeName = item.nodeName;
+			if (typeof(obj[nodeName]) == "undefined") {
+				obj[nodeName] = tempxmlToJson(item);
+			} else {
+				if (typeof(obj[nodeName].push) == "undefined") {
+					var old = obj[nodeName];
+					obj[nodeName] = [];
+					obj[nodeName].push(old);
+				}
+				obj[nodeName].push(tempxmlToJson(item));
+			}
+		}
+	}
+	return obj;
+	console.log(obj);
+};
+
+</script>
+
+
+
+<h1>testing</h1>
+
+
+</body>
+</html>
