@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2019, v.4002-->
+<?Pub Inc?>
+<topic id="SampleDocumentForARProcessing" translate="yes"
+xml:lang="en-US" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:ptc:names:arbortext:dita:xsd:techinfo.xsd">
+<title>Sample Document for AR Processing</title>
+<shortdesc></shortdesc>
+<body>
+<p><xref format="html" href="www.ptc.com" scope="external">URL Link</xref
+></p>
+<section deliveryTarget="HTML"><title>3D Sequence</title><fig>
+<title>Parking Brake 3D Sequence</title>
+<image href="parkingbrake.pvz" rev="Work Instructions" width="600px">
+</image></fig></section>
+<section deliveryTarget="HTML PDF"><title>Work Instructions</title
+><ol>
+<li><p><b audience="ARTitle">Itemized Parts List</b></p><image
+href="parkingbrake.pvz" rev="Work Instructions - Step 1 - 1"
+width="600px"></image><ul audience="ARText">
+<li><p>1 X 80991</p></li>
+<li><p>1 X 75219</p></li>
+<li><p>1 X 75218</p></li>
+<li><p>1 X 83960</p></li>
+<li><p>1 X 75409</p></li>
+<li><p>1 X 74958</p></li>
+<li><p>1 X 74921</p></li>
+</ul></li>
+<li><p><b audience="ARTitle">Press Fit Inner Washer</b></p><image
+href="parkingbrake.pvz" rev="Work Instructions - Step 2 - 1"
+width="600px"></image><p audience="ARText">Press fit Washer (75409)
+to shaft (83960) to </p><text audience="ARValue">X Specification</text
+></li>
+<li><p><b audience="ARTitle">Press Fit Bearing</b></p><image
+href="parkingbrake.pvz" rev="Work Instructions - Step 3 - 1"
+width="600px"></image><p audience="ARText">Press fit Bearing (75218
+&amp; 75219) to Shaft (83960) to </p><text audience="ARValue">X Specification</text
+></li>
+<li><p><b audience="ARTitle">Press Fit Bearing Seal</b></p><image
+href="parkingbrake.pvz" rev="Work Instructions - Step 4 - 1"
+width="600px"></image><p audience="ARText">Press Fit Outer Seal (80991)
+to shaft (83960) to </p><text audience="ARValue">X Specification</text
+></li>
+<li><p><b audience="ARTitle">Assemble End Washer and Nut</b></p><image
+href="parkingbrake.pvz" rev="Work Instructions - Step 5 - 1"
+width="600px"></image><p audience="ARText">Assemble Washer (74958)
+and Nut (74921) to shaft (83960) to</p><text audience="ARValue">Hand
+Tightness</text><?Pub Caret -2?></li>
+<li><p><b audience="ARTitle">Finished Assembly</b></p><image
+href="parkingbrake.pvz" rev="Work Instructions - Step 6 - 1"
+width="600px"></image></li>
+</ol></section>
+<p></p>
+</body>
+</topic>
